@@ -2,10 +2,9 @@ class TopicsController < ApplicationController
   def index
     @topics = Topic.all.includes(:favorite_users)
   end
-
+  
   def new
     @topic = Topic.new
-    #@favorite_user_count = @topic.favorite_users.size
   end
   
   def create
